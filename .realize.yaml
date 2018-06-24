@@ -1,0 +1,51 @@
+settings:
+  files:
+    outputs:
+      status: false
+      path: ""
+      name: .r.outputs.log
+    logs:
+      status: false
+      path: ""
+      name: .r.logs.log
+    errors:
+      status: false
+      path: ""
+      name: .r.errors.log
+  legacy:
+    force: false
+    interval: 0s
+server:
+  status: true
+  open: false
+  port: 5002
+  host: localhost
+schema:
+- name: gofunzi
+  path: /Users/sam/go/src/github.com/samrocksc/gofunzi
+  commands:
+    clean:
+      status: true
+    vet:
+      status: true
+    fmt:
+      status: true
+    test:
+      status: true
+    generate:
+      status: true
+    install:
+      status: true
+    build:
+      status: true
+    run:
+      status: true
+  watcher:
+    paths:
+    - /
+    extensions:
+    - go
+    ignored_paths:
+    - .git
+    - .realize
+    - vendor
